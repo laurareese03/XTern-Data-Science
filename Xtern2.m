@@ -7,7 +7,7 @@ end
 
 
 
-hold on
+%hold on
 s1 = scatter(x,y, 10, 'red', 'filled');
 
 
@@ -24,15 +24,15 @@ pause
 
 c = [];
 d = [];
-
+r = 1;
 for i = 1:247
     for j = 1:267
         if(a(i) == x(j))
-            c(i) = a(i);
-            d(i) = b(i);
+            c(r) = a(i);
+            d(r) = b(i);
+            r = r+1;
         end
     end
 end
 
-
-s3 = scatter(a,b, 10, 'blue', 'filled');
+s3 = scatter(c,d, 10, 'blue', 'filled');
